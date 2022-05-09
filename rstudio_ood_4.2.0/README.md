@@ -26,7 +26,7 @@ You can set `.libPath()`. Check out this accepted [answer](https://stackoverflow
 
 3.  Missing libraries?
 
-You can create a custom image by adding desired tools into the Singularity recipe and rebuild. Checkout [README](README-master.md) and [template recipe](rstudio_ood_4.2.0.recipe).
+You can create a custom image by adding desired tools into the Singularity recipe and rebuild. Checkout [README](../README.md) and [template recipe](rstudio_ood_4.2.0.recipe).
 
 ## References
 1. Template rstudio_ood_4.2.0.recipe authored by: hpcc-support@umassmed.edu
