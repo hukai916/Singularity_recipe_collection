@@ -5,15 +5,15 @@
 1. Login to [UMass OOD](https://www.umassrc.org:444/) with your HPCC credentials.
 
 2. Select **Interactive Apps** -> **RStudio Server** as well as desired resources:
-<img src="imgs/img01.png" width="500">
+  <img src="imgs/img01.png" width="500">
 
 3. Select the pre-built image that is located at `/project/umw_mccb/Singularity_images/rstudio_ood_4.2.0.sif`:
-<img src="imgs/img02.png" width="500">
+  <img src="imgs/img02.png" width="500">
 
 4. Click Launch, note that it may take up to a few minutes to initiate (**Don't double click! Otherwise, multiple sessions will be created!**).
 
 5. Click `Connect to RStudio Server` to continue:
-<img src="imgs/img03.png" width="500">
+  <img src="imgs/img03.png" width="500">
 
 ## Side notes
 1.  Installing custom R packages:
