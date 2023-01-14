@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: rocker/rstudio:4.2.2
+
+%labels
+	Author Kai.Hu@umassmed.edu
+
+%environment
+	export PATH=/usr/lib/rstudio-server/bin:$PATH
+
+%runscript
+	mkdir /tmp/run; rserver "${@}"
+
+%test
+	rserver --help

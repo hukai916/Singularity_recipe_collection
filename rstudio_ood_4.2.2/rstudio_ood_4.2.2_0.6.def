@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: rocker/rstudio:4.2.2
+
+%labels
+	Author Kai.Hu@umassmed.edu
+
+%environment
+	export PATH=/usr/lib/rstudio-server/bin:$PATH
+
+%runscript
+	mkdir /tmp/run; rserver "${@}"
+
+%post
+	apt-get update -q && apt-get install -q -y libz-dev
+	apt-get update -q && apt-get install -q -y libglpk-dev
+	apt-get update -q && apt-get install -q -y liblzma-dev
+	apt-get update -q && apt-get install -q -y libbz2-dev
+        apt-get update -q && apt-get install -q -y libcairo2-dev
+        apt-get update -q && apt-get install -q -y libxt-dev
+
+
+%test
+	rserver --help
