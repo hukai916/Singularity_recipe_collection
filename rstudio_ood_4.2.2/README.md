@@ -24,7 +24,7 @@
   %test
         rserver --help
 ```
-- Frustratingly, some system libraries are still missing when trying to install some R packages, here is a list of them:
+- Frustratingly, even with the above image, some system libraries are still missing when trying to install certain R packages, here is a list of them:
   - left is the R package in trouble, middle is the missing system file, right is the system library to be installed in order to fix the issue
 ```
 XVector       : zlib.h          : libz-dev
