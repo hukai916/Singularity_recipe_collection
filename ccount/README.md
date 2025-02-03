@@ -1,5 +1,13 @@
 # ccount
 
+## First, download the ccount.sif by clicking the following link:
+https://www.dropbox.com/scl/fi/z6749a9f3uvmi998r3ess/ccount.sif?rlkey=xy3nmej0mu70jghs86c8l92ur&dl=0
+
+## Then activate an interactive session:
+```
+singularity shell ccount.sif
+```
+
 ## Dev notes:
 1. When building using yml without dependency versions (not exported by `conda env export`), conda may take a lot of memory solving the env dependency tree, and Sylabs may fail due to exceeding memeory limit.
 2. Even building with yml with versions, this recipe take more than 1 hour to build using Sylabs, also exceeding the 60min time limit per job.
