@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%labels
+  Author Kai.Hu@umassmed.edu
+
+%files
+  environment_gpu_sci_work.yml
+
+%post
+  apt-get update -q && apt-get install -q -y libgl1-mesa-glx graphviz
+  /opt/conda/bin/conda env create -f environment_gpu_sci_work.yml
+
+%environment
+  source /opt/conda/bin/activate ccount
+  [ -f /lsf/conf/profile.lsf ] && source /lsf/conf/profile.lsf
+
+%runscript
+  exec /opt/conda/envs/$(head -n 1 environment_gpu_sci_work.yml | cut -f 2 -d ' ')/bin/"$@"

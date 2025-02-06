@@ -8,7 +8,7 @@ From: continuumio/miniconda3
   environment_sci_work.yml
 
 %post
-  apt-get update -q && apt-get install -q -y libgl1-mesa-glx
+  apt-get update -q && apt-get install -q -y libgl1-mesa-glx graphviz
   /opt/conda/bin/conda env create -f environment_sci_work.yml
 
 %environment
