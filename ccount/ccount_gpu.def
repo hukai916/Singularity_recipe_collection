@@ -12,7 +12,7 @@ From: continuumio/miniconda3
   /opt/conda/bin/conda env create -f environment_gpu_sci_work.yml
 
 %environment
-  source /opt/conda/bin/activate ccount
+  source /opt/conda/bin/activate c-count-env
   [ -f /lsf/conf/profile.lsf ] && source /lsf/conf/profile.lsf
 
 %runscript
